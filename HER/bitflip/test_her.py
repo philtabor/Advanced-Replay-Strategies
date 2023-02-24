@@ -23,7 +23,7 @@ for _ in range(40):
     while not d:
         action = env.action_space_sample()
         o_, r, d, i = env.step(action)
-        agl_ = o_[2*n_bits:3*n_bits]
+        agl_ = o_[n_bits:2*n_bits]
         s.append(o[:n_bits])
         a.append(action)
         re.append(r)

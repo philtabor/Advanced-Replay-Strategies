@@ -53,7 +53,7 @@ def main():
     max_size = 1_000_000
     input_shape = n_bits
     memory = HER(max_mem=max_size, input_shape=input_shape, n_actions=1,
-                 batch_size=batch_size, goal_shape=n_bits, strategy=None,
+                 batch_size=batch_size, goal_shape=n_bits, strategy='final',
                  reward_fn=env.compute_reward)
     agent = Agent(lr=0.001, epsilon=0.2, n_actions=n_bits, eps_dec=0.0,
                   batch_size=batch_size, input_dims=2*input_shape, gamma=0.98)
